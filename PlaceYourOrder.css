@@ -1,0 +1,132 @@
+@media only screen and (min-width: 600px) {
+  body {
+   
+    width:50%;
+    margin-left: 25vmax;
+  }
+}
+
+:root {
+  --main-radius: 5px;
+  --main-padding: 5px;
+}
+
+.container {
+  display: grid;
+  height: 100vh;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 3fr 4fr 4fr;
+  grid-template-areas:
+    "place-order"
+    "form"
+    "cust-addrs"
+    "order-number-totalprice";
+  grid-gap: 1rem;
+  font-weight: 800;
+  /* text-transform: uppercase; */
+  font-size: 12px;
+  /* color: #004d40; */
+  text-align: center;
+}
+
+.place-order {
+    margin: auto;
+    /* background: whitesmoke; */
+    grid-area: place-order;
+    border-radius: var(--main-radius);
+    padding-top: var(--main-padding);
+  }
+
+  .place-order-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    width: 200px;
+    height: 60px;
+    background: rgb(227, 227, 10);
+    border-radius: 20px / 20px;
+  }
+
+
+  .form {
+    
+    /* background: whitesmoke; */
+    grid-area: form;
+    border-radius: var(--main-radius);
+    padding-top: var(--main-padding);
+  }
+
+  .cust-addrs {
+    
+    /* background: whitesmoke; */
+    grid-area: cust-addrs;
+    border-radius: var(--main-radius);
+    padding-top: var(--main-padding);
+  }
+
+  .order-number-totalprice {
+    
+    /* background: whitesmoke; */
+    grid-area: order-number-totalprice;
+    display: flex;
+    border-radius: var(--main-radius);
+    padding-top: var(--main-padding);
+  }
+
+
+  /* https://webdesign.tutsplus.com/tutorials/how-to-build-web-form-layouts-with-css-grid--cms-28776 */
+/* form style sheet */
+
+form {
+  display: grid;
+  padding: 1em;
+  background: #f9f9f9;
+  border: 1px solid #c1c1c1;
+  margin: 2rem auto 0 auto;
+  max-width: 600px;
+  padding: 1em;
+}
+form input {
+  background: #fff;
+  border: 1px solid #9c9c9c;
+}
+form button {
+  background: lightgrey;
+  padding: 0.7em;
+  width: 100%;
+  border: 0;
+}
+form button {
+
+  background: rgb(187, 255, 0);
+}
+
+label {
+  padding: 0.5em 0.5em 0.5em 0;
+}
+
+input {
+  padding: 0.7em;
+  margin-bottom: 0.5rem;
+}
+input:focus {
+  outline: 3px solid gold;
+}
+@media (min-width: 400px) {
+  form {
+    grid-template-columns: 200px 1fr;
+    grid-gap: 16px;
+  }
+
+  label {
+    margin: auto;
+    text-align: right;
+    grid-column: 1 / 2;
+  }
+
+  input,
+  button {
+    grid-column: 2 / 3;
+  }
+}
